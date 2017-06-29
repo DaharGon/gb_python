@@ -32,6 +32,22 @@ print(sort_to_max([2, 10, -12, 2.5, 20, -11, 4, 4, 0]))
 # Напишите собственную реализацию функции filter
 # Разумеется, внутри нельзя использовать саму функцию filter
 
+numbers = [1, 2, 3, 4, 5]
+
+
+def filt(function, *args):
+    args = args[0]
+    new_array=[]
+    for i in args:
+        if function(i) == True:
+            new_array.append(i)
+    return new_array
+            
+even = filt(lambda x: x=='a', ['a', 'b', 'c', 'a'])
+print(list(even))            
+
+    
+
 
 # Задача-4:
 # Даны четыре точки А1(х1, у1), А2(x2 ,у2), А3(x3 , у3), А4(х4, у4).
